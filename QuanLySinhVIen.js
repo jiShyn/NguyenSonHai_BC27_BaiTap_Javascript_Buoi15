@@ -22,6 +22,7 @@ function passOrFail() {
    //gọi hàm kiểm tra có môn nào điểm 0
    var fail = isFail();
 
+   //in kết quả ra giao diện
    if (fail) {
       res.style.color = "red";
       res.innerHTML = `Rớt rồi hahahaaa. Một môn bị điểm 0 rùi.`;
@@ -41,6 +42,7 @@ function passOrFail() {
 function getBenchMark(benchmark) {
    if (benchmark < 0 || benchmark > 30) {
       alert("Vui lòng nhập lại điểm chuẩn!!!");
+      return benchmark;
    } else {
       return benchmark;
    }
@@ -81,3 +83,5 @@ function isFail() {
       return false;
    }
 }
+
+
